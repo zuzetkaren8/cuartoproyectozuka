@@ -1,0 +1,75 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+.boletos {
+    background-color: v.$verde;
+    h3{
+        color: v.$blanco;
+        font-size: 7rem;
+    }
+    .boletos-contenedor{
+        @include m.contenedor;
+        @include m.tablet {
+            @include m.grid(2);
+        }
+    }
+}
+
+.pase {
+    transition: transform .3s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+    }
+    &-nombre{
+        font-size: 3.6rem;
+        color: v.$blanco;
+        font-weight: 900;
+        text-align: center;
+    }
+    &-header,
+    &-footer{
+        p {
+            text-align: center;
+            margin: 0;
+            padding: 2rem;
+            color: v.$blanco;
+        }
+    }
+    &-header{
+        background-color: v.$rosa;
+        p{
+            text-transform: uppercase;
+            font-size: 2.2rem;
+        }
+    }
+    &-body{
+        background-color: v.$blanco;
+        ul{
+            @include m.resetear-lista;
+            li {
+                padding: 2rem;
+                border-bottom: 1px solid v.$plomo-claro;
+            }
+        }
+        
+    }
+    &-footer{
+        background-color: v.$blanco;
+        padding: 3rem;
+        p {
+            background-color: v.$morado;
+            font-weight: 900;
+            font-size: 2.8rem;
+            border-radius: 1rem;
+            cursor: pointer;
+            transition: transform .3s ease-in-out;
+            &:hover {
+                transform: scale(1.14);
+                background-color: color.adjust(v.$morado, $lightness: -20%);
+            }
+        }
+    }
+}
+
+

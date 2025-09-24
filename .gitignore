@@ -1,0 +1,21 @@
+# Dependencias de Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de Gulp y desarrollo
+gulpfile.js
+package.json
+package-lock.json
+
+# Carpetas de caché o temporales
+.sass-cache/
+.cache/
+dist/
+tmp/
+temp/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
